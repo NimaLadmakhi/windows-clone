@@ -1,0 +1,160 @@
+/** @format */
+
+:root {
+     --hover-background-rgba: rgba(255, 255, 255, 0.1);
+}
+
+/** @format */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     height: 100vh;
+     width: 100%;
+     overflow: hidden;
+     background: url('./images/windows-bg.png') no-repeat center center/cover fixed;
+}
+
+.navbar-task {
+     position: absolute;
+     z-index: 999;
+     overflow: hidden;
+     width: 100%;
+     height: 50px;
+     background-color: #222831;
+}
+
+.navbar-task.navbar-bottom {
+     left: 0;
+     bottom: 0;
+}
+
+.p-2 {
+     padding: 0 15px;
+}
+
+.p-1 {
+     padding: 0 10px;
+}
+
+.m-2 {
+     margin: 0 5px;
+}
+
+.d-flex {
+     display: flex;
+     align-items: center;
+}
+
+.flex-center {
+     justify-content: center;
+}
+
+.flex-between {
+     justify-content: space-between;
+}
+
+.h-100 {
+     height: 100%;
+}
+
+.navbar-task .section-taskbar .icon-bar {
+     height: 100%;
+     position: relative;
+     width: 50px;
+}
+
+.navbar-task .section-statusbar .icon-status.comment-status {
+     width: 45px;
+     margin-right: 5px;
+}
+
+.navbar-task .icon-bar:hover,
+.navbar-task .icon-status:hover {
+     cursor: default;
+     background: var(--hover-background-rgba);
+}
+
+.navbar-task .section-taskbar .icon-bar .cortana {
+     height: 15px;
+     width: 15px;
+     border: 2px solid #fff;
+     border-radius: 50%;
+}
+
+.navbar-task .section-taskbar .icon-bar img {
+     height: 50%;
+     width: 50%;
+}
+
+.m-1 {
+     margin: 0 2px;
+}
+
+.navbar-task .section-taskbar .icon-bar.search-icon img {
+     transform: rotate(85deg);
+}
+
+.navbar-task .section-taskbar .icon-bar.window-logo img {
+     height: 70%;
+     width: 70%;
+}
+
+.navbar-task .section-statusbar .icon-status.comment-status img {
+     width: 50%;
+     height: 50%;
+}
+
+.navbar-task .section-statusbar .icon-status {
+     height: 100% !important;
+     width: 20px;
+}
+
+.navbar-task .section-statusbar .icon-status img {
+     height: 15px;
+     width: 15px;
+}
+
+.navbar-task .section-statusbar .icon-status.status-battery img {
+     transform: rotate(90deg);
+}
+
+.navbar-task .section-statusbar .icon-status.status-wifi img {
+     transform: rotate(-45deg);
+}
+
+.navbar-task .section-statusbar .icon-status.lang {
+     color: #fff;
+     font-size: 11px;
+}
+
+.navbar-task .section-statusbar .icon-status.status-date {
+     width: auto;
+     flex-direction: column;
+     color: #fff;
+     font-size: 12px;
+     text-align: center;
+}
+
+.navbar-task .icon-bar.active-tab::before {
+     content: '';
+     position: absolute;
+     bottom: 1%;
+     left: 50%;
+     transform: translateX(-50%);
+     height: 2px;
+     width: 80%;
+     background: #fff;
+     transition: 0.3s all;
+}
+
+.navbar-task .icon-bar.active-tab {
+     background: var(--hover-background-rgba);
+}
+
+.navbar-task .icon-bar.active-tab:hover::before {
+     width: 100%;
+}
